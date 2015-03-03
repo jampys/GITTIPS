@@ -1,5 +1,10 @@
 COMANDOS UTILES GIT
 
+COMMIT
+HACER UN COMMIT CON MENSAJE
+Ej: git commit -m "este es el primer commit"
+
+
 MOVERSE DE UN COMMIT A OTRO
 git checkout <hash del commit destino>
 Ej: git checkout af78e6a
