@@ -1,0 +1,10 @@
+COMANDOS UTILES GIT
+
+MOVERSE DE UN COMMIT A OTRO
+git checkout <hash del commit destino>
+Ej: git checkout af78e6a
+
+PARA REGRESAR AL BRANCH MASTER
+git checkout master
+
+
