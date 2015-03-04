@@ -12,4 +12,6 @@ Ej: git checkout af78e6a
 PARA REGRESAR AL BRANCH MASTER
 git checkout master
 
+//hago una modificacion
+
 
