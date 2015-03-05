@@ -11,3 +11,35 @@ begin
     :NEW.categoria := upper(:NEW.categoria); 
      :NEW.email := upper(:NEW.email); 
 end; 
+
+*****************************************************************************************************************
+
+CREATE or REPLACE TRIGGER trig_md5
+BEFORE INSERT OR UPDATE ON usuarios
+FOR EACH ROW
+BEGIN
+:NEW.password := encrypt(:NEW.password);
+END;
+
+//el trigger modificado para que solo se ejecute cuando el update involucra al campo 'password':
+
+CREATE or REPLACE TRIGGER trig_md5
+BEFORE INSERT OR UPDATE OF password ON usuarios
+FOR EACH ROW
+BEGIN
+:NEW.password := encrypt(:NEW.password);
+END;
+
+
+CREATE OR REPLACE 
+function encrypt( input varchar2 ) return sys.dbms_obfuscation_toolkit.varchar2_checksum as
+begin
+return sys.dbms_obfuscation_toolkit.md5( input_string => input );
+end; 
+
+
+select * from usuarios where password = encrypt('chaco')
+
+
+PARA BORRAR LA FUNCION:
+DROP FUNCTION oe.SecondMax; 
