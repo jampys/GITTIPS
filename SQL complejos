@@ -1,0 +1,56 @@
+SELECT SUM(total) AS totalGeneral
+FROM
+(
+select sum(viaticos) as total from asignacion_plan where id_solicitud=170
+UNION
+select sum (pc.importe) as total from plan_capacitacion pc, asignacion_plan ap
+where ap.id_plan = pc.id_plan and moneda='$' and ap.id_solicitud = 170
+UNION
+select sum (pc.importe * pc.tipo_cambio) as total from plan_capacitacion pc, asignacion_plan ap
+where ap.id_plan = pc.id_plan and moneda='USD' and ap.id_solicitud = 170
+)
+
+********************************************************************************************************
+
+select * from
+(select sum(viaticos) as viaticos from asignacion_plan where id_solicitud=170),
+(select sum (pc.importe) as pesos from plan_capacitacion pc, asignacion_plan ap
+where ap.id_plan = pc.id_plan and moneda='$' and ap.id_solicitud = 170),
+(select sum (pc.importe * pc.tipo_cambio) as dolares from plan_capacitacion pc, asignacion_plan ap
+where ap.id_plan = pc.id_plan and moneda='USD' and ap.id_solicitud = 170)
+
+
+*********************************************************************************************************
+
+select id_plan, count(*)
+from asignacion_plan ap
+group by ap.id_plan
+
+
+select pc.id_plan, count(ap.id_asignacion)
+from asignacion_plan ap, plan_capacitacion pc
+where pc.id_plan = ap.id_plan
+group by ap.id_plan
+
+**********************************************************************************************************
+
+select pc.id_plan, pc.objetivo, cu.nombre, (select count(*)from asignacion_plan ap where ap.id_plan = pc.id_plan) as cantidad
+from plan_capacitacion pc, cursos cu 
+where pc.id_curso=cu.id_curso
+
+
+IMPORTANTE: Al usar group by, todos los campos del select deben estar en el group by (sino falla)
+
+
+**********************************************************************************************************
+REPORTES
+**********************************************************************************************************
+
+select ca.nombre CATEGORIA, cu.nombre CURSO, 
+(select count(cursos.id_curso) from cursos, temas, categorias where cursos.id_tema = temas.id_tema and temas.id_categoria = categorias.id_categoria and temas.id_categoria = ca.id_categoria) TOTAL
+from categorias ca, cursos cu, temas te
+where te.id_categoria = ca.id_categoria
+and cu.id_tema = te.id_tema
+
+
+
