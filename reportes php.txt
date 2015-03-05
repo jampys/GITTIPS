@@ -1,0 +1,15 @@
+* dompdf  //mas o menos
+* ireports como editor (con jasper reports para PHP )//esta bueno esteticamente, pero son bastantes archivos
+http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=jasperreportPHP
+https://community.jaspersoft.com/wiki/php-client-sample-code
+http://forumsarchive.laravel.io/viewtopic.php?id=13581
+https://community.jaspersoft.com/questions/822686/how-connect-jasper-reports-php-application
+http://stackoverflow.com/questions/10929248/how-to-connect-ireports-from-php
+http://chathurangat.blogspot.com.ar/2012/03/jasperreports-with-php.html
+
+ver:
+* tcpdf
+* Crystal Reports
+* Smart Report Maker http://mysqlreports.com/  //Solo para mysql
+* Reportico: ver un poco mas
+* php reports:  http://jdorn.github.io/php-reports/
