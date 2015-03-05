@@ -1,0 +1,2 @@
+//Seleccionar todas las tablas que tienen el campo llamado PERIODO
+select * from all_tab_columns where column_name='PERIODO'
