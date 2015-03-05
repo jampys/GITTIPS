@@ -1,0 +1,13 @@
+AUTOINCREMENT
+
+create or replace 
+trigger trig_empleados_upper 
+before insert or update on empleados
+for each row 
+begin 
+   :NEW.apellido := upper(:NEW.apellido); 
+   :NEW.nombre := upper(:NEW.nombre); 
+   :NEW.funcion := upper(:NEW.funcion); 
+    :NEW.categoria := upper(:NEW.categoria); 
+     :NEW.email := upper(:NEW.email); 
+end; 
