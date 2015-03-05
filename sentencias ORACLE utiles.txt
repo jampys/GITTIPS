@@ -1,2 +1,11 @@
+update empleados set lugar_trabajo = ltrim(rtrim(lugar_trabajo));
+
+update empleados set lugar_trabajo = 'CH' where lugar_trabajo= 'CRD';
+
+update empleados set nombre= upper(nombre);
+
+insert into plan_capacitacion (id_plan, id_curso, periodo, objetivo, modalidad, fecha_desde, duracion, unidad, prioridad, estado, importe, moneda, cantidad, forma_pago, profesor_1, comentarios) values (2, 1,	2014, 'Formación a Futuro', 'Presencial', to_date('14/04/2014','DD/MM/YYYY'), 252, 'Horas', 1, 'Propuesto', 1093.29, 'UDS', 2, null, null, 'http://www.inegas.edu.bo/index.php/post-grado');
+
+
 //Seleccionar todas las tablas que tienen el campo llamado PERIODO
 select * from all_tab_columns where column_name='PERIODO'
