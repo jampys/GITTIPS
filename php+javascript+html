@@ -1,0 +1,21 @@
+
+EMBEBER CODIGO JAVASCRIPT EN HTML:
+Ej1:
+<div id='result'>
+       <script>document.write($('#handler').val());</script>
+</div>
+
+Ej2:
+<h1><script>document.write($('#handler').val());</script></h1>
+
+EMBEBER CODIGO PHP EN JAVASCRIPT
+Ej1:
+document.write("<?php echo "Hello World"; ?>");
+
+Ej2:
+$("#selector").html("Este es codigo php <?php echo $variable_php ?>");
+
+
+EMBEBER CODIGO JAVASCRIPT EN PHP
+Ej:
+echo "<script>window.location='index.php;'</script>";
