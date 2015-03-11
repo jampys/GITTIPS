@@ -21,7 +21,7 @@ git push origin master //master es el branch, podria ser otro branch. Origin es 
 git push origin branch //Sincroniza solo la rama con el repositorio remoto, no el master.
 
 Si se quiere sincronizar todas las ramas del local al remoto:
-git push REMOTE --all
+git push origin --all //siendo origin el repositorio remoto
 git push --all origin //este sincroniza todas las ramas y tags
 
 DESHACER CAMBIOS:
