@@ -32,3 +32,8 @@ git checkout -- benchmarks.rb //deshace cambios unicamente en el fichero benchma
 ELIMINAR RAMAS (BRANCH): Es necesario eliminarla en loca y en remoto
 git branch -d nombre_rama //para eliminar en local
 git push origin :nombre_rama //para eliminar en remoto
+
+CONOCER SI UNA RAMA FUE FUSIONADA CON MASTER (MERGE):
+git branch --merged master //lists branches merged into master
+git branch --merged //lists branches merged into HEAD (i.e. tip of current branch)
+git branch --no-merged //lists branches that have not been merged
