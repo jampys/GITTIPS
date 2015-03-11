@@ -28,3 +28,7 @@ DESHACER CAMBIOS:
 * Deshacer cambios locales hasta ultimo commit
 git checkout . //deshace cambios en todos los archivos
 git checkout -- benchmarks.rb //deshace cambios unicamente en el fichero benchmarks.rb
+
+ELIMINAR RAMAS (BRANCH): Es necesario eliminarla en loca y en remoto
+git branch -d nombre_rama //para eliminar en local
+git push origin :nombre_rama //para eliminar en remoto
