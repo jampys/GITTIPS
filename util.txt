@@ -24,3 +24,7 @@ Si se quiere sincronizar todas las ramas del local al remoto:
 git push REMOTE --all
 git push --all origin //este sincroniza todas las ramas y tags
 
+DESHACER CAMBIOS:
+* Deshacer cambios locales hasta ultimo commit
+git checkout . //deshace cambios en todos los archivos
+git checkout -- benchmarks.rb //deshace cambios unicamente en el fichero benchmarks.rb
