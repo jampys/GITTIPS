@@ -1,0 +1,7 @@
+    
+    
+    !( A OR B ) = (!A AND !B) = (!=A AND !=B)
+    !( A AND B ) = (!A OR !B) = (!=A OR !=B)
+    
+    
+  
