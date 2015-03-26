@@ -1,0 +1,23 @@
+
+DISABLE DIALOG BUTTON
+
+$("#dialog").dialog({
+    width: 480,
+    height: "auto",
+    buttons: [
+        {
+            id: "button-cancel",
+            text: "Cancel",
+            click: function() {
+                $(this).dialog("close");
+            }
+        },
+        {
+            id: "button-ok",
+            text: "Ok",
+            click: function() {
+                $(this).dialog("close");
+            }
+        }
+    ]
+});
