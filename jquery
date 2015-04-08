@@ -21,3 +21,20 @@ $("#dialog").dialog({
         }
     ]
 });
+
+RESPUESTAS JSON
+** Del lado del controlador PHP **
+$respuesta = array ('response'=>'error','comment'=>'Error al enviar la comunicación');
+
+**Del lado del la vista(codigo jquery ajax json)
+success:function(datas){
+
+                    if(datas.response == 'success'){
+                    }
+                    else if (datas.response == 'error'){
+                    }
+                    $("#dialog-msn").dialog("open");
+                    $("#message").html(datas['comment']);
+
+                },
+
