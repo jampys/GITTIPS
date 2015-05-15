@@ -23,6 +23,7 @@ git push origin branch //Sincroniza solo la rama con el repositorio remoto, no e
 Si se quiere sincronizar todas las ramas del local al remoto:
 git push origin --all //siendo origin el repositorio remoto
 git push --all origin //este sincroniza todas las ramas y tags
+git push --tags //para sincronizar tag del local con remoto
 
 DESHACER CAMBIOS:
 * Deshacer cambios locales hasta ultimo commit
