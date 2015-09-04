@@ -14,3 +14,20 @@ SYS.V_$SESSION.USERNAME, SYS.V_$SESSION.MACHINE, SYS.V_$LOCK.ID1, SYS.V_$LOCK.RE
 FROM SYS.V_$SESSION, SYS.V_$LOCK, SYS.USER_OBJECTS
 WHERE ((SYS.V_$SESSION.SID=SYS.V_$LOCK.SID)
  AND (SYS.V_$LOCK.ID1=SYS.USER_OBJECTS.OBJECT_ID))
+ 
+ 
+
+SECUENCIAS
+
+CREATE SEQUENCE sec_sol_cap_increment
+START WITH 1
+INCREMENT BY 1;
+
+drop sequence sec_sol_cap_increment
+   
+select * from all_sequences where sequence_owner = 'DARIO'
+  
+  
+  
+  
+
