@@ -21,3 +21,4 @@ var my_var = <?php echo json_encode("hola"); ?>;
 EMBEBER CODIGO JAVASCRIPT EN PHP
 Ej:
 echo "<script>window.location='index.php;'</script>";
+echo "<script>alert(".$lugar_trabajo.");</script>";
