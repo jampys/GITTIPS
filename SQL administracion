@@ -26,6 +26,13 @@ INCREMENT BY 1;
 drop sequence sec_sol_cap_increment
    
 select * from all_sequences where sequence_owner = 'DARIO'
+
+
+PASSWORD CADUCADO
+select spare4 from sys.user$ where name = 'DARIO'
+select password from dba_users where username = 'DARIO'
+alter user DARIO identified by values 'S:29F5EE8E562FD8E29BCAD491EC2AFFF0067485D63057BC486C6065D7B5D9'
+select * from dba_users
   
   
   
