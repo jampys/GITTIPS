@@ -27,6 +27,18 @@ drop sequence sec_sol_cap_increment
    
 select * from all_sequences where sequence_owner = 'DARIO'
 
+SECUENCIAS - MODIFICAR ESTADO
+
+select max(id_tema)
+from temas
+
+drop sequence SEC_TEMAS;
+
+CREATE SEQUENCE SEC_TEMAS
+START WITH 281
+NOCACHE
+INCREMENT BY 1;
+
 
 PASSWORD CADUCADO
 select spare4 from sys.user$ where name = 'DARIO'
