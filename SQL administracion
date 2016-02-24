@@ -19,6 +19,9 @@ WHERE ((SYS.V_$SESSION.SID=SYS.V_$LOCK.SID)
 
 SECUENCIAS
 
+ver todas las secuencias del usuario
+select * from user_sequences
+
 CREATE SEQUENCE sec_sol_cap_increment
 START WITH 1
 INCREMENT BY 1;
